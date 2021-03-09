@@ -1,0 +1,52 @@
+<form [formGroup]="userProfile">
+    <div class="row col-md-12">
+        <div class="form-group col-md-4">
+            <label for="InputName">First Name</label>
+            <input type="text" class="form-control" id="InputName" placeholder="First Name"
+                formControlName="first_name">
+            <small id="emailHelp" class="form-text text-muted"
+                *ngIf="userProfile.controls['first_name'].touched && !userProfile.controls['first_name'].valid">Please
+                Enter First Name</small>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="InputUsername">Last Name</label>
+            <input type="text" class="form-control " id="InputUsername" placeholder="Last Name"
+                formControlName="last_name">
+            <small id="emailHelp" class="form-text text-muted"
+                *ngIf="userProfile.controls['last_name'].touched && !userProfile.controls['last_name'].valid">Please
+                Enter Last Name</small>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="exampleFormControlInput2">Email</label>
+            <input type="email" class="form-control " id="exampleFormControlInput2" placeholder="name@example.com"
+                formControlName="email">
+            <small id="emailHelp" class="form-text text-muted"
+                *ngIf="userProfile.controls['email'].touched && !userProfile.controls['email'].valid">Please
+                Enter Valid Email</small>
+        </div>
+    </div>
+    <div class="row col-md-12">
+        <div class="form-group col-md-4">
+            <label for="InputName">Address 1</label>
+            <input type="text" class="form-control " id="InputName" placeholder="Address 1" formControlName="addr1">
+            <small id="emailHelp" class="form-text text-muted"
+                *ngIf="userProfile.controls['addr1'].touched && !userProfile.controls['addr1'].valid">Please
+                Enter Address 1</small>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="InputUsername">Address 2</label>
+            <input type="text" class="form-control " id="InputUsername" placeholder="Address 2" formControlName="addr2">
+            <small id="emailHelp" class="form-text text-muted"
+                *ngIf="userProfile.controls['addr2'].touched && !userProfile.controls['addr2'].valid">Please
+                Enter Address 2</small>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="exampleFormControlInput2">City</label>
+            <input type="email" class="form-control " id="City" placeholder="name@example.com" formControlName="city">
+            <small id="emailHelp" class="form-text text-muted"
+                *ngIf="userProfile.controls['city'].touched && !userProfile.controls['city'].valid">Please
+                Enter City Name</small>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="submitForm()" [disabled]="!userProfile.valid">Submit</button>
+</form>

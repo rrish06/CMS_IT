@@ -1,0 +1,80 @@
+<!-- Bootstrap NavBar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-primary" style="margin-left: 100px;">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30"
+            class="d-inline-block align-top" alt="">
+        <span class="menu-collapsed">My Bar</span>
+    </a>
+</nav><!-- NavBar END -->
+
+
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block" style="margin-top: -56px;">
+        <ul class="list-group">
+            <!-- <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                <small>OPTIONS</small>
+            </li> -->
+            <div style="background-color: #928c8c !important;cursor: pointer;"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <i style="color: white" class="fa fa-home fa-3x" aria-hidden="true"></i>
+                    <!-- <span class="menu-collapsed">Calendar</span> -->
+                </div>
+            </div>
+            <div style="background-color: #928c8c !important;cursor: pointer;"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <i style="color: white" class="fa fa-home fa-3x" aria-hidden="true"></i>
+                    <!-- <span class="menu-collapsed">Calendar</span> -->
+                </div>
+            </div>
+            <div style="background-color: #928c8c !important;cursor: pointer;"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <i style="color: white" class="fa fa-home fa-3x" aria-hidden="true"></i>
+                    <!-- <span class="menu-collapsed">Calendar</span> -->
+                </div>
+            </div>
+            <div style="background-color: #928c8c !important;cursor: pointer;"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <i style="color: white" class="fa fa-home fa-3x" aria-hidden="true"></i>
+                    <!-- <span class="menu-collapsed">Calendar</span> -->
+                </div>
+            </div>
+            <!-- Separator without title -->
+            <!-- <li class="list-group-item sidebar-separator menu-collapsed"></li> -->
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="col" style="background-color: #c7c4c4ab;">
+        <div style="margin-top: 80px;">
+            <div class="content">
+                <!-- Nav pills -->
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#userList">Users List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#userProfile">Users Profile</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="userList" class="container tab-pane active">
+                        <app-userslist></app-userslist>
+                    </div>
+                    <div id="userProfile" class="container tab-pane fade">
+                        <app-userprofile></app-userprofile>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Main Col END -->
+</div><!-- body-row END -->
